@@ -1,0 +1,41 @@
+@base_url = http://localhost:5154/pages
+
+# FUNCIONÁRIO ######################################
+
+### Criação de um novo aluno
+POST {{base_url}}/aluno/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "feliphe",
+    "sobrenome" : "santos"
+}
+
+### Obtenção de todos os alunos
+GET {{base_url}}/aluno/listar
+
+### Criacao do imc
+POST {{base_url}}/imc/cadastrar
+Content-Type: application/json
+
+{
+    "peso": 100,
+    "altura" : 1.85,
+    "alunoId" : 3
+}
+
+### Obtenção de todos os imcs
+GET {{base_url}}/imc/listar
+
+### Obtenção de um imc
+GET {{base_url}}/imc/listar/2
+
+### alterar imc por id
+PUT {{base_url}}/imc/alterar/2
+Content-Type: application/json
+
+{
+    "peso": 100,
+    "altura" : 1.85,
+    "alunoId" : 2
+}
